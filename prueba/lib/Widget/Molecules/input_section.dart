@@ -16,13 +16,13 @@ class InputSection extends StatelessWidget {
     return Column(
       children: [
         CustomTextField(
-          label: 'Número A',
+          label: 'Numero A',
           controller: aController,
           keyboardType: TextInputType.number,
         ),
         const SizedBox(height: 16),
         CustomTextField(
-          label: 'Número B',
+          label: 'Numero B',
           controller: bController,
           keyboardType: TextInputType.number,
         ),

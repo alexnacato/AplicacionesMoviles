@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import './View/HomePage.dart'; // Ajusta la ruta según tu proyecto
+import './View/HomePage.dart'; 
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp()); 
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,9 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.grey[100],
       ),
-      darkTheme: ThemeData.dark(),
-      themeMode: ThemeMode.system, // Cambia entre modo claro y oscuro automáticamente
-      home: const HomePage(),
+      home: HomePage(), 
     );
   }
 }

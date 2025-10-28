@@ -8,27 +8,18 @@ class AmigosController extends ChangeNotifier {
   String resultado = '';
 
   void verificar() {
-    // Intentar convertir los textos a enteros
     final a = int.tryParse(aController.text);
     final b = int.tryParse(bController.text);
 
-    
     if (a == null || b == null || a <= 0 || b <= 0) {
-      resultado = 'Ingrese solo nUmeros enteros positivos.';
-      return;
+      resultado = 'Ingrese solo números enteros positivos.';
+    } else {
+      final numeros = Numeros(a, b);
+      resultado = numeros.sonAmigos()
+          ? '$a y $b son números amigos.'
+          : '$a y $b no son amigos.';
     }
 
     
-    final numeros = Numeros(a, b);
-
-    
-    final sonAmigos = numeros.sonAmigos();
-
-    
-    resultado = sonAmigos
-        ? ' $a y $b son nUmeros amigos.'
-        : ' $a y $b no son amigos.';
-
-  
   }
 }
